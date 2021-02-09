@@ -4,20 +4,40 @@ public class Calendar2 {
 	public int Maxmonth(int a) {
 		return array[a-1];
 	}
-	
 	public static void main(String[] args) {
+		String PROMPT = "cal> ";
 		Scanner sc = new Scanner(System.in);
 		Calendar2 c = new Calendar2();
-		System.out.println("반복 횟수를 입력해주세요");
-		int i = sc.nextInt();
-		for(int b = 1; b <=i; b++) {
+		
+		while(true) {
 			System.out.println("월을 입력해주세요 : ");
+			System.out.print(PROMPT);
 			int a = sc.nextInt();
+			if(a < 1) {
+				System.out.println("월이 없다.");
+				break;
+			}
+			else if(a>12) {
+				continue;
+			}
 			System.out.printf("%d월은 %d일까지 있습니다.\n", a, c.Maxmonth(a));	
 		}
 	}	
 }
         
+//	public static void main(String[] args) {
+//		String PROMPT = "cal> ";
+//		Scanner sc = new Scanner(System.in);
+//		Calendar2 c = new Calendar2();
+//		System.out.println("반복 횟수를 입력해주세요");
+//		int i = sc.nextInt();
+//		for(int b = 1; b <=i; b++) {
+//			System.out.println("월을 입력해주세요 : ");
+//			System.out.print(PROMPT);
+//			int a = sc.nextInt();
+//			System.out.printf("%d월은 %d일까지 있습니다.\n", a, c.Maxmonth(a));	
+//		}
+//	}	
         
 //    public static void main(String[] args) {
 //    	int[] array = new int[] {28, 30, 31};
