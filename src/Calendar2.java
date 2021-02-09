@@ -8,10 +8,14 @@ public class Calendar2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Calendar2 c = new Calendar2();
-        System.out.println("달 입력해주세요 : ");
-        int a = sc.nextInt();
-        System.out.printf("%d월은 %d일까지 있습니다.", a, c.Maxmonth(a));
-	}
+		System.out.println("반복 횟수를 입력해주세요");
+		int i = sc.nextInt();
+		for(int b = 1; b <=i; b++) {
+			System.out.println("월을 입력해주세요 : ");
+			int a = sc.nextInt();
+			System.out.printf("%d월은 %d일까지 있습니다.\n", a, c.Maxmonth(a));	
+		}
+	}	
 }
         
         
