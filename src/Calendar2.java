@@ -1,13 +1,16 @@
 import java.util.Scanner;
 public class Calendar2 {
-
+	static final int[] array= {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	public int Maxmonth(int a) {
+		return array[a-1];
+	}
+	
 	public static void main(String[] args) {
-		int[] array = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-		
 		Scanner sc = new Scanner(System.in);
+		Calendar2 c = new Calendar2();
         System.out.println("달 입력해주세요 : ");
         int a = sc.nextInt();
-        System.out.printf("%d월은 %d일까지 있습니다.", a, array[a-1]);
+        System.out.printf("%d월은 %d일까지 있습니다.", a, c.Maxmonth(a));
 	}
 }
         
