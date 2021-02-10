@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Virtualcalendar3 {
+public class Virtualcalendarday {
 	static final int[] array= {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	static final int[] leap_array= {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};//윤년
 	static final String PROMPT = "cal> ";
@@ -25,6 +25,7 @@ public class Virtualcalendar3 {
 		System.out.println(" ----------------------");
 		int Allday = Maxmonth(y, m); 
 		for(int i = 1; i <= Allday; i++) {
+			
 			System.out.printf("%3d", i);
 			if(i%7==0) {
 				System.out.println();
@@ -39,7 +40,7 @@ public class Virtualcalendar3 {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Virtualcalendar3 v = new Virtualcalendar3();
+		Virtualcalendarday v = new Virtualcalendarday();
 		int y, m;
 		while(true) {
 			System.out.println();
@@ -47,7 +48,6 @@ public class Virtualcalendar3 {
 			System.out.print(PROMPT);
 			y = sc.nextInt();//연도
 			m = sc.nextInt();//월
-			
 			if(m<1) {
 				System.out.println("월이 없습니다.");
 				break;
